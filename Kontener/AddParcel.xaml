@@ -1,0 +1,37 @@
+﻿<Window x:Class="Kontener.AddParcel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kontener"
+        mc:Ignorable="d"
+        Title="Dodaj paczkę" Height="300" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="parcelBackground.jpg" Opacity="0.6"/>
+        </Grid.Background>
+        
+        <!--#region Labels-->
+        <Label x:Name="lblAddParcel" Content="Podaj dane paczki" Width="206" FontSize="25" Margin="44,10,43.6,0" HorizontalAlignment="Center" Height="44" VerticalAlignment="Top"/>
+        <Label x:Name="lblParcelNumberID" Content="Numer ID Paczki:" HorizontalAlignment="Left" Margin="16,59,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label x:Name="lblParcelSizeX" Content="Szerokość paczki:" HorizontalAlignment="Left" Margin="16,90,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblParcelSizeXunit" Content="m" HorizontalAlignment="Left" Margin="191,90,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblParcelSizeXDefaultValue" Content="0.4m ~ 4m" HorizontalAlignment="Left" Margin="216,90,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblParcelSizeY" Content="Długość paczki:" HorizontalAlignment="Left" Margin="26,121,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblParcelSizeYunit" Content="m" HorizontalAlignment="Left" Margin="191,121,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblParcelSizeYDefaultValue" Content="0.4m ~ 4m" HorizontalAlignment="Left" Margin="216,121,0,0" VerticalAlignment="Top"/>
+        <!--#endregion-->
+        
+        <!--#region TextBoxes-->
+        <TextBox x:Name="txtParcelNumberID" Text="0" HorizontalAlignment="Left" Height="23" Margin="136,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" PreviewTextInput="txtParcelNumberIDIsNumerable"/>
+        <TextBox x:Name="txtParcelSizeX" Text="1.2" HorizontalAlignment="Left" Height="23" Margin="136,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" LostFocus="txtParcelSizeIsNumerable"/>
+        <TextBox x:Name="txtParcelSizeY" Text="0.8" HorizontalAlignment="Left" Height="23" Margin="136,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" LostFocus="txtParcelSizeIsNumerable" />
+        <!--#endregion-->
+        
+        <!--#region Buttons-->
+        <Button x:Name="btnAddParcelConfirm" Content="Dodaj paczkę" HorizontalAlignment="Left" Margin="100,167,0,0" VerticalAlignment="Top" Width="125" Height="50" Click="btnAddParcel_Click"/>
+        <Button x:Name="btnAddParcelCancel" Content="Anuluj" HorizontalAlignment="Left" Margin="112.5,222,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="btnAddParcelCancel_Click"/>
+        <!--#endregion-->
+    </Grid>
+</Window>

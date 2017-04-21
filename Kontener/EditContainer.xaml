@@ -1,0 +1,35 @@
+﻿<Window x:Class="Kontener.EditContainer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kontener"
+        mc:Ignorable="d"
+        Title="Edytuj wymiary kontenera" Height="300" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="containerBackground.jpg" Opacity="0.4"/>
+        </Grid.Background>
+        
+        <!--#region Labels-->
+        <Label x:Name="lblEditContainer" Content="Zmień dane kontenera" Width="260" FontSize="25" Margin="0,10,0,0" HorizontalAlignment="Center" Height="44" VerticalAlignment="Top"/>
+        <Label x:Name="lblContainerSizeX" Content="Szerokość kontenera:" HorizontalAlignment="Left" Margin="6,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblContainerSizeXunit" Content="m" HorizontalAlignment="Left" Margin="192,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblContainerSizeXDefaultValue" Content="1m ~ 5m" HorizontalAlignment="Left" Margin="217,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblContainerSizeY" Content="Długość kontenera:" HorizontalAlignment="Left" Margin="16,111,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblContainerSizeYunit" Content="m" HorizontalAlignment="Left" Margin="192,111,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblContainerSizeYDefaultValue" Content="5m ~ 20m" HorizontalAlignment="Left" Margin="216,111,0,0" VerticalAlignment="Top"/>
+        <!--#endregion-->
+        
+        <!--#region TextBoxes-->
+        <TextBox x:Name="txtContainerSizeX" HorizontalAlignment="Left" Height="23" Margin="136,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" LostFocus="txtContainerSizeXIsNumerable"/>
+        <TextBox x:Name="txtContainerSizeY" HorizontalAlignment="Left" Height="23" Margin="136,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" LostFocus="txtContainerSizeYIsNumerable"/>
+        <!--#endregion-->
+        
+        <!--#region Buttons-->
+        <Button x:Name="btnEditContainerConfirm" Content="Potwierdź zmiany" HorizontalAlignment="Left" Margin="100,167,0,0" VerticalAlignment="Top" Width="125" Height="50" Click="btnEditContainerConfirm_Click"/>
+        <Button x:Name="btnEditContainerCancel" Content="Anuluj" HorizontalAlignment="Left" Margin="112.5,222,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="btnEditContainerCancel_Click"/>
+        <!--#endregion-->
+    </Grid>
+</Window>
